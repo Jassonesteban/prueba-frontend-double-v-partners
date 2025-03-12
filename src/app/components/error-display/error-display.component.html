@@ -1,0 +1,12 @@
+<div *ngIf="errorMessage" class="flex items-center p-4 mb-4 text-sm text-red-700 bg-red-100 border border-red-400 rounded-lg relative">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M21 12c0 4.971-4.029 9-9 9s-9-4.029-9-9 4.029-9 9-9 9 4.029 9 9z"></path>
+  </svg>
+  <span>{{ errorMessage }}</span>
+
+  <button (click)="cerrarError()" class="absolute top-2 right-1 text-red-700 hover:text-red-900 focus:outline-none">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+</div>

@@ -1,0 +1,26 @@
+<section class="w-full min-h-[300px] flex flex-col justify-center items-center p-6">
+  <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+    🔍 ENCUENTRA LOS TALENTOS
+  </h2>
+
+  <div class="w-full max-w-2xl flex flex-col md:flex-row gap-4">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      placeholder="Buscar usuarios..."
+      aria-label="Buscar usuarios"
+      autocomplete="off"
+      class="w-full p-4 text-lg bg-white border border-gray-300 rounded-lg shadow-sm
+      focus:outline-none focus:ring-2 focus:ring-black transition"
+    >
+    <button
+      type="button"
+      (click)="searchUsers()"
+      aria-label="Iniciar búsqueda"
+      class="px-6 py-4 bg-black text-white text-lg font-semibold rounded-lg shadow-md
+      hover:bg-gray-500 transition"
+    >
+      Buscar
+    </button>
+  </div>
+</section>

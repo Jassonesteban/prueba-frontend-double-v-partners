@@ -1,0 +1,51 @@
+<div class="flex justify-center mt-8">
+  <div class="max-w-3xl w-full bg-white shadow-lg rounded-lg p-6">
+    <div class="flex items-center space-x-4">
+      <img [src]="user.avatar_url" alt="User Avatar" class="w-34 h-34 rounded-full shadow-md">
+
+      <div>
+        <h1 class="text-2xl font-bold text-gray-800">{{ user.name || 'N/A' }}</h1>
+        <h3 class="text-1xl font-bold text-gray-400 mb-4">{{user.login || 'N/A'}}</h3>
+        <p class="text-gray-600">{{ user.bio || 'Biografia no disponible' }}</p>
+
+        <div class="flex items-center space-x-3 mt-3">
+          <div class="flex items-center space-x-1">
+            <span class="font-medium text-gray-700">{{ user.followers }}</span>
+            <span class="text-gray-500">Seguidores</span>
+          </div>
+          <div class="flex items-center space-x-1">
+            <span class="font-medium text-gray-700">{{ user.following }}</span>
+            <span class="text-gray-500">Siguiendo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="flex flex-col">
+          <span class="text-sm text-gray-500">Compañia</span>
+          <span class="text-gray-700">{{ user.company || 'N/A' }}</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm text-gray-500">Ubicacion</span>
+          <span class="text-gray-700">{{ user.location || 'N/A' }}</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm text-gray-500">Repositorios publicos</span>
+          <span class="text-gray-700">{{ user.public_repos }}</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm text-gray-500">Public Gists</span>
+          <span class="text-gray-700">{{ user.public_gists }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center">
+      <a [href]="user.html_url" target="_blank" class="text-sm text-green-500 hover:underline">
+        Ver más detalles
+      </a>
+    </div>
+  </div>
+</div>
